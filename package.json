@@ -1,0 +1,19 @@
+{
+  "name": "usuarios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plomachi/usuarios-api.git"
+  },
+  "author": "Pgomes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plomachi/usuarios-api/issues"
+  },
+  "homepage": "https://github.com/plomachi/usuarios-api#readme"
+}
