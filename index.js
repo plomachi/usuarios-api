@@ -5,3 +5,5 @@
 // Paulo - Responsável por criar a função de adicionar um usuário
 
 // ALL - Responsável por criar a função de remover um usuário
+
+console.log("Ola, mundo")
