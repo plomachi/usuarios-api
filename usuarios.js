@@ -3,29 +3,38 @@
 // Aluno 3 - Responsável por criar a função de listar todos os usuários inserindo mais uma informação para cada de ativo: true
 // Aluno 4 - Responsável por criar a função de adicionar um usuário
 // Aluno 5- Responsável por criar a função de remover um usuário
+
 let bancoDeDados = require('./database/users.json')
 
 // ['Mylena', 'Clara', 'Lenix'] => array de strings
 // [1, 2, 3, 4, 5] => array de números
 // [{}, {}, {}] => array de objetos
 
-function listarUsuariosMaioresDeIdade() {
-    // 1- Filtro os usuários
-    // 2- Retorno mapeando e trazendo apenas o nome
-    const lista = bancoDeDados.filter((usuario) => usuario.idade > 18).map((usuario) => usuario.nome);
+const listarUsuariosMaioresDeIdade = () => {
+  // 1- Filtro os usuários
+  // 2- Retorno mapeando e trazendo apenas o nome
+  const lista = bancoDeDados.filter((usuario) => usuario.idade > 18).map((usuario) => usuario.nome)
 
     return lista;
 }
 console.log('Lista de usuários acima de 18: ', listarUsuariosMaioresDeIdade());
+
+
+// Aluno 3 - Responsável por criar a função de listar todos os usuários inserindo mais uma informação para cada de ativo: true
+
+// map -> retorna um novo array
+// ... -> spread operator
+// ativar somente usuários acima de 18
+
 const listarUsuariosAdicionandoAtivo = () => {
-  // map -> retorna um novo array
-  // ... -> spread operator
-  // ativar somente usuários acima de 18
+  
   const lista = bancoDeDados.map((usuario) => ({ ...usuario, ativo: usuario.idade > 18 }))
 
   return lista;
 }
 console.log('Lista de usuários com ativo: ', listarUsuariosAdicionandoAtivo());
+
+// Aluno 4 - Responsável por criar a função de adicionar um usuário
 
 const adicionarUsuario = (usuario) => {
   // 1 - Verificar se o parâmetro veio e está ok.
@@ -56,6 +65,8 @@ adicionarUsuario({
   "telefone": "999999999"
 });
 console.log("Lista de usuários com o novo usuário: ", bancoDeDados);
+
+// Aluno 5- Responsável por criar a função de remover um usuário
 
 const removerUsuario = (idUsuario) => {
   // Find Index -> retorna o índice do elemento que eu quero caso ache, senão retorna -1
