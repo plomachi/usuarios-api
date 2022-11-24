@@ -9,12 +9,12 @@ let bancoDeDados = require('./database/users.json')
 // [1, 2, 3, 4, 5] => array de números
 // [{}, {}, {}] => array de objetos
 
-const listarUsuariosMaioresDeIdade = () => {
-  // 1- Filtro os usuários
-  // 2- Retorno mapeando e trazendo apenas o nome
-  const lista = bancoDeDados.filter((usuario) => usuario.idade > 18).map((usuario) => usuario.nome)
+function listarUsuariosMaioresDeIdade() {
+    // 1- Filtro os usuários
+    // 2- Retorno mapeando e trazendo apenas o nome
+    const lista = bancoDeDados.filter((usuario) => usuario.idade > 18).map((usuario) => usuario.nome);
 
-  return lista;
+    return lista;
 }
 console.log('Lista de usuários acima de 18: ', listarUsuariosMaioresDeIdade());
 const listarUsuariosAdicionandoAtivo = () => {
